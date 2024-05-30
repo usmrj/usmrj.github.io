@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heap 0</title>
+</head>
+<body>
+  <h2>Marked as: <b>easy</b></h2>
+   <a href="https://play.picoctf.org/practice/challenge/439">Challange link</a>
+    <p>
+      In this challange we were provided with 2 files, one containing program code and other one was an ELF executable.<br>
+      After a quick look at a source code, I noticed the goal of the challange:  
+    </p>
+    <img src="/images/pico_heap1-0.png">
+    <p>
+      Knowing that, I used the msf module for generating patterns<br>
+    </p>
+    <img src="/images/pico_heap1-1.png">
+    <p>
+        Now I passed the output to the chall with simple python script 
+    </p>
+    <img src="/images/pico_heap1-2.png">
+    <img src="/images/pico_heap1-3.png">
+    <img src="/images/pico_heap1-4.png">
+    <p>
+        Knowing the offset, I updated the script, to send data to the server using pwntools<br>
+        and we got the flag!
+    </p>
+    <img src="/images/pico_heap1-5.png">
+</body>
+</html>
