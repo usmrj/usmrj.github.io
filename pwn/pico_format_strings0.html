@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heap 0</title>
+</head>
+<body>
+  <h2>Marked as: <b>easy</b></h2>
+   <a href="https://play.picoctf.org/practice/challenge/433">Challange link</a>
+    <p>
+      In this challange we were provided with 2 files, one containing program code and other one was an ELF executable.<br>
+      After a quick look at a source code, I noticed the goal of the challange:  
+    </p>
+    <img src="/images/pico_format_string0-0.png">
+    <p>
+      Now all I had to do was achieving a segmentation fault.<br>
+      Lucky for us, we were presented with prompt, that gave us exact length we needed to achieve an overflow of some pointer.
+    </p>
+    <img src="/images/pico_format_string0-1.png">
+    <p>
+        Spamming random letters (as %d takes integer only) resulted in a SIGSEGV and flag!
+    </p>
+    <img src="/images/pico_format_string0-2.png">
+</body>
+</html>
