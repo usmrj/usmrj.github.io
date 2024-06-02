@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heap 0</title>
+</head>
+<body>
+  <h2>Marked as: <b>easy</b></h2>
+   <a href="https://play.picoctf.org/practice/challenge/216">Challange link</a>
+    <p>
+      In this challange we were provided with 2 files, one containing program code and other one was an ELF executable.<br>
+      Firstly, a checkup with a checksec.
+      Looking at a source code, I found it uses "gets()", which is vulnerable to buffer overflow
+    </p>
+    <img src="../images/pico_clutter_overflow0.png">
+    <p>
+        Now I had to find the offset, used msf-pattern-*<br>
+    </p>
+    <img src="../images/pico_clutter_overflow1.png"> 
+    <p>
+        Tried solving it with python only, but something went wrong.
+    </p>
+    <img src="../images/pico_clutter_overflow2.png"> 
+    <p>
+        So I mixed it up with echo and received the flag!
+    </p>
+    <img src="../images/pico_clutter_overflow3.png"> 
+</body>
+</html>
